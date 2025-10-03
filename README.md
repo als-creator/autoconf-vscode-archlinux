@@ -29,7 +29,7 @@ curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf-vscode-archlin
 После публикации файлов в репозитории, пользователь может запустить настройку с помощью единственной команды:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/autoconf-vscode/main/autoconf-vscode.sh | sh
+curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/autoconf-vscode-archlinux/main/autoconf-vscode-archlinux.sh | sh
 ```
 
 Это скачает и исполнит скрипт, который произведёт полную подготовку среды Visual Studio Code, включая настройки и установку расширений.
