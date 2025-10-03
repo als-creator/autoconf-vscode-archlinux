@@ -7,7 +7,7 @@
 Просто выполни одну команду, чтобы установить и настроить VS Code:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf-vscode/main/autoconf-vscode.sh | sh
+curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf-vscode-archlinux/main/autoconf-vscode-archlinux.sh | sh
 ```
 
 ## 📂 Структура репозитория
