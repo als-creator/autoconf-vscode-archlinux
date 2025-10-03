@@ -42,7 +42,7 @@ SETTINGS_JSON_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/
 EXTENSIONS_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/extensions.txt"
 
 # Установка Visual Studio Code через YAY
-echo "🚀 Начинаю установку Visual Studio Code..."
+echo "Начинаю установку Visual Studio Code..."
 yay -Sy visual-studio-code-bin --noconfirm
 
 # Создание директории Config, если её нет
