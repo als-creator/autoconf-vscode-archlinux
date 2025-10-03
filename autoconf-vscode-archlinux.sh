@@ -34,7 +34,7 @@ EXTENSIONS_DIR="/home/$USERNAME/.vscode/extensions"
 
 # Данные репозитория на GitHub
 REPO_OWNER="als-creator"
-REPO_NAME="autoconf-vscode"
+REPO_NAME="autoconf-vscode-archlinux"
 BRANCH="main"
 
 # URL ресурсов
