@@ -1,0 +1,107 @@
+{
+  "files.defaultLanguage": "html", // Использовать дефолтный язык html для новых файлов
+  "files.autoSave": "onFocusChange", // Автосохранение файла при потере фокуса окна
+  "editor.formatOnSave": true, // Форматировать код при сохранении файла
+  "editor.formatOnType": true, // Форматируйте строку при печати
+  "editor.formatOnPaste": true, // Форматировать вставленный текст
+  "editor.mouseWheelZoom": true, // Масштабировать редактор колесом мыши
+  "editor.linkedEditing": true, // Синхронно менять повторяющиеся части кода при редактировании, полезно при рефакторинге
+  "workbench.activityBar.location": "top", // Активити бар сверху
+  "workbench.editor.showTabs": "single", // Одна активная вкладка в редакторе
+  "workbench.editor.showIcons": false, // Скрыть иконки на вкладках файлов
+  "workbench.editor.labelFormat": "short", // Панель инструментов расположена сверху
+  "security.workspace.trust.enabled": false, // Отключить систему доверия к рабочим пространствам
+  "editor.fontSize": 18, // Размер шрифта редактора
+  "terminal.integrated.fontSize": 18, // Размер шрифта в терминале
+  "python.terminal.activateEnvironment": true, // Автоактивация виртуального окружения python при открытии проекта
+  "workbench.startupEditor": "none", // Новый файл открывается без стартового окна
+  "editor.renderControlCharacters": true, // Показывать управляющие символы (например, перевод строки)
+  "editor.tabSize": 2, // Размер табуляции равен двум пробелам
+  "editor.insertSpaces": true, // Вставка правильного числа пробелов при табуляции
+  "editor.folding": false, // Отключить сворачивание кода
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Форматтер кода по умолчанию
+  "editor.minimap.autohide": "mouseover", // Миникарта открывается при наведении
+  "editor.renderWhitespace": "trailing", // Показывать пробелы только в конце строк
+  "editor.lineHeight": 23, // Высота строки — 23 px
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}|;:'\",.<>/?", // Разделительные символы слов для навигации по тексту
+  "editor.renderLineHighlight": "none", // Отключить подсветку строк по умолчанию
+  "editor.fontFamily": "Fira Code", // Использовать легкую схему шрифтов для повышения чёткости
+  "editor.fontLigatures": true, // Улучшить качество печати моноширинных шрифтов
+  "http.proxyStrictSSL": true, // Пользоваться стандартным менеджером закачек для скачивания зависимостей
+  "editor.lineNumbers": "relative", // Выравнивание строки подчёркиванием и указанием номера строки
+  "explorer.confirmDelete": false, // Не требовать подтверждения при удалении файлов
+  "search.useIgnoreFiles": true, // Задействует содержимое .gitignore при поиске
+  "search.exclude": {
+    // Настройка фильтров файлов при поиске
+    "**/node_modules": true,
+    "**/build": true,
+    "**/.git": true
+  },
+  "files.exclude": {
+    // Исключаемые файлы и папки из поиска и открытия
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true
+  },
+  // "editor.tokenColorCustomizations": {
+  //   //раскраска разными цветами пар ключ-значение
+  //   "textMateRules": [
+  //     {
+  //       "scope": "support.type.property-name.json, entity.name.tag.json",
+  //       "settings": {
+  //         "fontStyle": "italic", // курсив
+  //         "foreground": "#8be9fd" // цвет для ключей
+  //       }
+  //     },
+  //     {
+  //       "scope": "string.quoted.double.json, constant.numeric.json",
+  //       "settings": {
+  //         "foreground": "#f1fa8c" // цвет для значений
+  //       }
+  //     }
+  //   ]
+  // },
+  "editor.occurrencesHighlight": "singleFile", //Выделение ключа курсором
+  "editor.bracketPairColorization.enabled": true, //Подсветка парных скобок
+  "editor.autoClosingBrackets": "always", // Автооткрытие конструктора при двойной точке с запятой
+  "editor.autoClosingQuotes": "always", // Завершать скобки автоматически
+  "editor.hover.enabled": true, // Включить всплывающие подсказки при наведении
+  "editor.parameterHints.enabled": true, // Показывать подсказки параметров функций
+  "editor.quickSuggestionsDelay": 2000, //Время появления подсказок при наборе в мс
+  "editor.hover.delay": 2000, //Время появления подсказок при наведении в мс
+  "editor.tabCompletion": "on", //Позволяет дополнять слова нажатием Tab для удобства.
+  "editor.quickSuggestions": { "other": "on" }, // Показывать подсказки сразу при вводе
+  "editor.suggest.showMethods": true, // Показывать автодополнение с методами
+  "editor.suggest.showClasses": true, // Показывать подсказки по классам
+  "editor.suggest.showKeywords": true, // Показывать подсказки по ключевым словам
+  "editor.suggest.showConstants": true, // Показывать подсказки по константам
+  "editor.suggest.showConstructors": true, // Показывать подсказки по конструкторам
+  "editor.suggest.showEnums": true, // Показывать подсказки по перечислениям
+  "editor.suggest.showEnumMembers": true, // Показывать подсказки по членам перечислений
+  "editor.suggest.showEvents": true, // Показывать подсказки по событиям
+  "editor.suggest.showFields": true, // Показывать подсказки по полям
+  "editor.suggest.showFiles": true, // Показывать подсказки по файлам
+  "editor.suggest.showFunctions": true, // Показывать подсказки по функциям
+  "editor.suggest.showInterfaces": true, // Показывать подсказки по интерфейсам
+  "editor.suggest.showIssues": true, // Показывать подсказки по проблемам
+  "editor.suggest.showOperators": true, // Показывать подсказки по операторам
+  "editor.suggest.showStructs": true, // Показывать подсказки по структурам
+  "editor.suggest.showUnits": true, // Показывать подсказки по единицам измерения
+  "editor.suggest.showValues": true, // Показывать подсказки по значениям
+  "editor.suggest.showVariables": true, // Показывать подсказки по переменным
+  "terminal.integrated.shell.linux": "/usr/bin/fish", // Устанавливаем шелл по умолчанию
+  "terminal.integrated.shellArgs.linux": ["--login", "--debug-level 3"], //передаваемые в терминал документы
+  "terminal.integrated.cursorStyle": "line", // Стиль строки курсора терминала
+  "terminal.integrated.cursorBlinking": true, // Курсор терминала мигает
+  "terminal.integrated.copyOnSelection": true, // Копировать выделенный текст в терминал автоматически
+  "terminal.integrated.fontFamily": "Hack",
+  "git.enabled": true, // Встроенная интеграция git
+  "git.autofetch": true, // Включить миграцию проектов в автономный режим
+  "git.path": "/usr/bin/git", // Конкретный путь к git-executable
+  "extensions.autoUpdate": true, // Периодически проверять обновления для установленных расширений
+  "npm.packageManager": "npm", // Пакетник для npm
+  // "editor.smoothScrolling": true, // Плавная прокрутка в редакторе
+  // "editor.cursorSmoothCaretAnimation": "on", // Включить плавную анимацию курсора
+  "workbench.colorTheme": "Owlet (Slate)", // Тема оформления
+}
