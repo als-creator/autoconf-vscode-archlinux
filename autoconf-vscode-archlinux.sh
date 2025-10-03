@@ -6,9 +6,9 @@ set -e
 
 # Проверка наличия sudo
 if sudo -l &>/dev/null; then
-  echo "✅ Есть права sudo"
+  echo "Наличие прав sudo проверено"
 else
-  echo "❌ Нет прав sudo"
+  echo "У вас нет прав sudo"
   exit 1
 fi
 
@@ -43,7 +43,7 @@ EXTENSIONS_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${B
 
 # Установка Visual Studio Code через YAY
 echo "🚀 Начинаю установку Visual Studio Code..."
-sudo yay -Sy visual-studio-code-bin --noconfirm
+yay -Sy visual-studio-code-bin --noconfirm
 
 # Создание директории Config, если её нет
 mkdir -p "$CONFIG_DIR"
@@ -58,5 +58,5 @@ for ext in ${EXTENSIONS}; do
 done
 
 # Сообщение об успехе
-echo "✅ Настройки и расширения успешно установлены!"
+echo "Настройки и расширения успешно установлены при условии беспроблемного интернет-соединения!"
 exit 0
