@@ -7,7 +7,9 @@
   "editor.mouseWheelZoom": true, // Масштабировать колесом мыши
   "editor.linkedEditing": true, // Автоматически менять закрывающий тег при редактировании
   "editor.occurrencesHighlight": "singleFile", // Включает подсветку всех вхождений, включено по умолчанию
+  "editor.multiCursorModifier": "ctrlCmd", // Управление поведением нескольких курсоров
   "editor.bracketPairColorization.enabled": true, // Подсветка парных скобок по всему документу
+  "editor.gotoLocation.multipleDefinitions": "goto", // Быстрый переход внутрь модуля
   "editor.matchBrackets": "always", //Подсветка парных скобок у курсора
   "editor.autoClosingBrackets": "always", // Завершать скобки автоматически и ставить курсор между ними.
   "editor.autoClosingQuotes": "always", // Завершать кавычки автоматически
@@ -37,42 +39,49 @@
   "workbench.editor.showIcons": false, // Скрыть иконки на вкладках файлов
   "workbench.editor.labelFormat": "short", // Панель инструментов расположена сверху
   "workbench.colorTheme": "Owlet (Slate)",
+  "security.workspace.trust.enabled": false, // Отключить функцию доверия рабочей области
   "security.workspace.trust.untrustedFiles": "open", // Отключить запрос о доверии к рабочему пространству при запуске
-  "terminal.integrated.defaultProfile.linux": "fish", //Оболочка терминала по умолчанию
+  "terminal.integrated.defaultProfile.linux": "bash", //Оболочка терминала по умолчанию
   "terminal.integrated.cursorStyle": "line", // Стиль строки курсора терминала
   "terminal.integrated.copyOnSelection": true, // Копировать выделенный текст в терминал автоматически
-  "terminal.integrated.fontFamily": "Terminess Nerd Font Mono", // Шрифт терминала
-  "terminal.integrated.fontSize": 20, // Размер шрифта в терминале
+  "terminal.integrated.fontSize": 18, // Размер шрифта в терминале
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "git.autofetch": true, // Автозагрузка свежих коммитов из реп
   "npm.packageManager": "npm", // Пакетник для js
   "explorer.confirmDelete": false, // Не требовать подтверждения при удалении файлов
-  "editor.quickSuggestionsDelay": 1200, // Время появления подсказок при наборе в мс
-  "editor.hover.delay": 1200, // Время появления подсказок при наведении в мс
+  "editor.quickSuggestionsDelay": 200, // Время появления подсказок при наборе в мс
+  "editor.hover.delay": 200, // Время появления подсказок при наведении в мс
   "editor.smoothScrolling": true, // Плавная прокрутка в редакторе
   "editor.cursorSmoothCaretAnimation": "on", // Включить плавную анимацию курсора
-  // "editor.tokenColorCustomizations": {
-  //   //раскраска разными цветами js пар ключ-значение
-  //   "textMateRules": [
-  //     {
-  //       "scope": "support.type.property-name.json, entity.name.tag.json",
-  //       "settings": {
-  //         "fontStyle": "italic", // курсив
-  //         "foreground": "#8be9fd" // цвет для ключей
-  //       }
-  //     },
-  //     {
-  //       "scope": "string.quoted.double.json, constant.numeric.json",
-  //       "settings": {
-  //         "foreground": "#f1fa8c" // цвет для значений
-  //       }
-  //     }
-  //   ]
-  // },
-
+  "ruff.enable": true, // Включаем Ruff (через официальное расширение)
+  "python.linting.enabled": true, // Включаем общий линтинг Python
+  "ruff.lineLength": 88, // Максимальная длина строки
+  "ruff.lint.select": ["E", "F", "W", "I", "D"], // Включённые категории проверок
+  "python.linting.pylintEnabled": false, // Отключаем другие линтеры, чтобы не мешали (по желанию)
+  "python.linting.flake8Enabled": false,
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit", // Применяет все доступные "исправления" (fix all) при явном сохранении
+      "source.organizeImports": "explicit" // Автоматически упорядочивает импорты при явном сохранени
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff" // Дефолтный форматтер для питона
+  },
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "emmet.includeLanguages": { "django-html": "html" },
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.run": "onSave",
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always", // Обновляет импортированные пути при перемещении файлов
   "sync.gist": "97fc7d05ceae8261c734efb500452ccb",
-  "yaml.schemas": {
-    "file:///home/als/.vscode-oss/extensions/continue.continue-1.2.8-linux-x64/config-yaml-schema.json": [
-      ".continue/**/*.yaml"
-    ]
-  }
 }
