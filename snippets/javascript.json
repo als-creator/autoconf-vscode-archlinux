@@ -1,0 +1,62 @@
+{
+  "Console Log Shortcut": {
+    "prefix": "cc",
+    "body": "console.log($1);",
+    "description": "Shortcut for console.log()"
+  },
+  "Arrow Function": {
+    "prefix": "af",
+    "body": "const ${1:func} = (${2:params}) => {\n  $3\n};",
+    "description": "Quick arrow function"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": "for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i}++) {\n  $3\n}",
+    "description": "Basic for loop"
+  },
+  "ES6 Import": {
+    "prefix": "impo",
+    "body": "import ${1:module} from '${2:path}';",
+    "description": "ES6 import statement"
+  },
+  "ES6 Export": {
+    "prefix": "expo",
+    "body": "export default ${1:module};",
+    "description": "ES6 export default"
+  },
+  "Promise": {
+    "prefix": "prom",
+    "body": "new Promise((resolve, reject) => {\n  $1\n});",
+    "description": "Basic Promise"
+  },
+  "Async Function": {
+    "prefix": "asy",
+    "body": "const ${1:func} = async (${2:params}) => {\n  try {\n    $3\n  } catch (error) {\n    console.error(error);\n  }\n};",
+    "description": "Async function with try-catch"
+  },
+  "Class": {
+    "prefix": "clas",
+    "body": "class ${1:ClassName} {\n  constructor(${2:params}) {\n    $3\n  }\n\n  ${4:method}() {\n    $5\n  }\n}",
+    "description": "ES6 Class"
+  },
+  "Try Catch": {
+    "prefix": "try",
+    "body": "try {\n  $1\n} catch (error) {\n  console.error(error);\n}",
+    "description": "Try-catch block"
+  },
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": "const ${1:Component} = ({ }) => {\n  return (\n    <div>\n      $2\n    </div>\n  );\n};\n\nexport default ${1:Component};",
+    "description": "React Functional Component"
+  },
+  "Use State Hook": {
+    "prefix": "us",
+    "body": "const [${1:state}, set${1:State}] = useState($2);",
+    "description": "React useState hook"
+  },
+  "Use Effect Hook": {
+    "prefix": "ue",
+    "body": "useEffect(() => {\n  $1\n\n  return () => {\n    // Cleanup\n  };\n}, [${2:deps}]);",
+    "description": "React useEffect hook"
+  }
+}

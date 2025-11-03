@@ -1,0 +1,72 @@
+{
+  // Сниппеты для Bash/Shell Script
+  "Shebang": {
+    "prefix": "sh",
+    "body": "#!/bin/bash",
+    "description": "Bash shebang header"
+  },
+  "Echo Statement": {
+    "prefix": "e",
+    "body": "echo \"$1\"",
+    "description": "Echo to console"
+  },
+  "Function": {
+    "prefix": "func",
+    "body": "${1:function_name}() {\n    $2\n}",
+    "description": "Bash function"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": "for ${1:item} in ${2:items}; do\n    $3\n\ndone",
+    "description": "For loop over items"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": "while [ ${1:condition} ]; do\n    $2\n\ndone",
+    "description": "While loop"
+  },
+  "If Else": {
+    "prefix": "if",
+    "body": "if [ ${1:condition} ]; then\n    $2\nelse\n    $3\nfi",
+    "description": "If-else statement"
+  },
+  "Case Statement": {
+    "prefix": "case",
+    "body": "case ${1:variable} in\n    ${2:pattern1})\n        $3\n;;\n    ${4:pattern2})\n        $5\n;;\n    *)\n        echo \"Default case\"\n;;\nesac",
+    "description": "Case switch statement"
+  },
+  "Read Input": {
+    "prefix": "read",
+    "body": "read -p \"Enter ${1:prompt}: \" $2",
+    "description": "Read user input"
+  },
+  "Error Handling": {
+    "prefix": "err",
+    "body": "if [ $? -ne 0 ]; then\n    echo \"Error occurred\"\n    exit 1\nfi",
+    "description": "Check last command error"
+  },
+  "Array": {
+    "prefix": "arr",
+    "body": "${1:array}=( ${2:items} )",
+    "description": "Bash array initialization"
+  },
+  "Main Script Template": {
+    "prefix": "main",
+    "body": [
+      "#!/bin/bash",
+      "",
+      "set -euo pipefail  # Exit on error, undefined vars, pipe failures",
+      "",
+      "${1:function_name}() {",
+      "    $2",
+      "}",
+      "",
+      "main() {",
+      "    $3",
+      "}",
+      "",
+      "main"
+    ],
+    "description": "Full bash script template"
+  }
+}

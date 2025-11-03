@@ -44,7 +44,7 @@ EXTENSIONS_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${B
 # Установка Visual Studio Code через YAY
 echo "Начинаю установку Visual Studio Code..."
 yay -Sy visual-studio-code-bin --noconfirm
-
+echo "Visual Studio Code установлен"
 # Создание директории Config, если её нет
 mkdir -p "$CONFIG_DIR"
 
@@ -57,6 +57,26 @@ for ext in ${EXTENSIONS}; do
   code --install-extension "$ext"
 done
 
-# Сообщение об успехе
-echo "Настройки и расширения успешно установлены при условии беспроблемного интернет-соединения!"
+# Добавляем синхронизацию папки snippets
+SNIPPETS_DIR="${CONFIG_DIR}/snippets"
+mkdir -p "$SNIPPETS_DIR"
+
+echo "Скачиваем сниппеты для JavaScript..."
+wget -qO- "https://raw.githubusercontent.com/als-creator/autoconf-code-oss-archlinux/main/snippets/javascript.json" > "${SNIPPETS_DIR}/javascript.json"
+
+echo "Скачиваем сниппеты для Python..."
+wget -qO- "https://raw.githubusercontent.com/als-creator/autoconf-code-oss-archlinux/main/snippets/python.json" > "${SNIPPETS_DIR}/python.json"
+
+echo "Скачиваем сниппеты для Go..."
+wget -qO- "https://raw.githubusercontent.com/als-creator/autoconf-code-oss-archlinux/main/snippets/go.json" > "${SNIPPETS_DIR}/go.json"
+
+echo "Скачиваем сниппеты для PHP..."
+wget -qO- "https://raw.githubusercontent.com/als-creator/autoconf-code-oss-archlinux/main/snippets/php.json" > "${SNIPPETS_DIR}/php.json"
+
+echo "Скачиваем сниппеты для Bash/Shell..."
+wget -qO- "https://raw.githubusercontent.com/als-creator/autoconf-code-oss-archlinux/main/snippets/shellscript.json" > "${SNIPPETS_DIR}/shellscript.json"
+
+# Готово!
+echo "Все настройки и сниппеты установлены!"
+echo "Путь к сниппетам: $SNIPPETS_DIR"
 exit 0

@@ -1,0 +1,55 @@
+{
+  "Print Statement": {
+    "prefix": "p",
+    "body": "print($1)",
+    "description": "Quick print statement"
+  },
+  "Function": {
+    "prefix": "def",
+    "body": "def ${1:function_name}(${2:params}):\n    ${3:pass}",
+    "description": "Python function definition"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": "for ${1:item} in ${2:iterable}:\n    ${3:pass}",
+    "description": "For loop over iterable"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": "while ${1:condition}:\n    ${2:pass}",
+    "description": "While loop"
+  },
+  "If Else": {
+    "prefix": "if",
+    "body": "if ${1:condition}:\n    ${2:pass}\nelse:\n    ${3:pass}",
+    "description": "If-else statement"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": "class ${1:ClassName}:\n    def __init__(self, ${2:params}):\n        ${3:pass}",
+    "description": "Python class with init"
+  },
+  "Try Except": {
+    "prefix": "try",
+    "body": "try:\n    ${1:code}\nexcept ${2:Exception} as e:\n    print(e)",
+    "description": "Try-except block"
+  },
+  "Main Block": {
+    "prefix": "main",
+    "body": [
+      "if __name__ == '__main__':",
+      "    ${1:pass}"
+    ],
+    "description": "Main execution block"
+  },
+  "List Comprehension": {
+    "prefix": "lc",
+    "body": "[${1:item} for ${1:item} in ${2:iterable} if ${3:condition}]",
+    "description": "List comprehension"
+  },
+  "Dictionary": {
+    "prefix": "dict",
+    "body": "${1:dict_name} = {\n    '${2:key}': ${3:value}\n}",
+    "description": "Dictionary initialization"
+  }
+}

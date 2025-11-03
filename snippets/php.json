@@ -1,0 +1,68 @@
+{
+  "Echo Statement": {
+    "prefix": "e",
+    "body": "echo $1;",
+    "description": "Quick echo output"
+  },
+  "Print Statement": {
+    "prefix": "p",
+    "body": "print($1);",
+    "description": "Print statement"
+  },
+  "Function": {
+    "prefix": "func",
+    "body": "function ${1:functionName}(${2:$param}) {\n    $3\n}",
+    "description": "PHP function definition"
+  },
+  "Method": {
+    "prefix": "meth",
+    "body": "public function ${1:methodName}(${2:$param}): ${3:void} {\n    $4\n}",
+    "description": "Class method with type hints"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "<?php",
+      "class ${1:ClassName} {",
+      "    public function __construct(${2:params}) {",
+      "        $3",
+      "    }",
+      "}"
+    ],
+    "description": "PHP class with constructor"
+  },
+  "If Else": {
+    "prefix": "if",
+    "body": "if (${1:condition}) {\n    $2\n} else {\n    $3\n}",
+    "description": "If-else statement"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": "for (${1:$i} = 0; ${1:$i} < ${2:$count}; ${1:$i}++) {\n    $3\n}",
+    "description": "For loop"
+  },
+  "Foreach Loop": {
+    "prefix": "foreach",
+    "body": "foreach (${1:$array} as ${2:$key} => ${3:$value}) {\n    $4\n}",
+    "description": "Foreach loop with key-value"
+  },
+  "Try Catch": {
+    "prefix": "try",
+    "body": "try {\n    $1\n} catch (Exception $e) {\n    echo 'Error: '. $e->getMessage();\n}",
+    "description": "Try-catch block"
+  },
+  "Array": {
+    "prefix": "arr",
+    "body": "$1 = array(\n    '${2:key}' => ${3:value}\n);",
+    "description": "PHP array initialization"
+  },
+  "PDO Query": {
+    "prefix": "pdo",
+    "body": [
+      "$stmt = $pdo->prepare('SELECT * FROM ${1:table} WHERE ${2:condition}');",
+      "$stmt->execute([${3:params}]);",
+      "$result = $stmt->fetchAll();"
+    ],
+    "description": "PDO prepared statement"
+  }
+}

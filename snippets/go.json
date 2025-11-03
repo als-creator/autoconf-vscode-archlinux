@@ -1,0 +1,62 @@
+{
+  "Print Statement": {
+    "prefix": "p",
+    "body": "fmt.Println($1)",
+    "description": "Print to console"
+  },
+  "Function": {
+    "prefix": "func",
+    "body": "func ${1:functionName}(${2:params}) ${3:*${4:Type}} {\n\t$5\n}",
+    "description": "Go function definition"
+  },
+  "Method": {
+    "prefix": "meth",
+    "body": "func (${1:receiver} ${2:Type}) ${3:methodName}(${4:params}) ${5:*${6:ReturnType}} {\n\t$7\n}",
+    "description": "Go method on struct"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": "for ${1:i}:= 0; ${1:i} < ${2:length}; ${1:i}++ {\n\t$3\n}",
+    "description": "For loop with index"
+  },
+  "Range Loop": {
+    "prefix": "range",
+    "body": "for ${1:index}, ${2:value}:= range ${3:slice} {\n\t$4\n}",
+    "description": "For range loop"
+  },
+  "If Else": {
+    "prefix": "if",
+    "body": "if ${1:condition} {\n\t$2\n} else {\n\t$3\n}",
+    "description": "If-else statement"
+  },
+  "Struct": {
+    "prefix": "struct",
+    "body": "type ${1:StructName} struct {\n\t${2:Field} ${3:Type}\n}",
+    "description": "Go struct definition"
+  },
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "package main",
+      "",
+      "import (",
+      "\t\"fmt\"",
+      ")",
+      "",
+      "func main() {",
+      "\t$1",
+      "}"
+    ],
+    "description": "Main function with package and imports"
+  },
+  "Error Handling": {
+    "prefix": "err",
+    "body": "if err!= nil {\n\treturn ${1:err}\n}",
+    "description": "Standard error check"
+  },
+  "Interface": {
+    "prefix": "iface",
+    "body": "type ${1:InterfaceName} interface {\n\t${2:Method}(${3:params}) ${4:ReturnType}\n}",
+    "description": "Go interface"
+  }
+}
