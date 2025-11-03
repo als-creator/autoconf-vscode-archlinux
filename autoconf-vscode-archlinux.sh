@@ -51,12 +51,6 @@ mkdir -p "$CONFIG_DIR"
 # Скачивание настроек и помещение их в директорию пользователя
 wget -qO- "$SETTINGS_JSON_URL" > "$CONFIG_DIR/settings.json"
 
-# Установка расширений из списка
-EXTENSIONS=$(curl -s "$EXTENSIONS_URL")
-for ext in ${EXTENSIONS}; do
-  code --install-extension "$ext"
-done
-
 # Добавляем синхронизацию папки snippets
 SNIPPETS_DIR="${CONFIG_DIR}/snippets"
 mkdir -p "$SNIPPETS_DIR"
@@ -75,6 +69,12 @@ wget -qO- "https://raw.githubusercontent.com/als-creator/autoconf-code-oss-archl
 
 echo "Скачиваем сниппеты для Bash/Shell..."
 wget -qO- "https://raw.githubusercontent.com/als-creator/autoconf-code-oss-archlinux/main/snippets/shellscript.json" > "${SNIPPETS_DIR}/shellscript.json"
+
+# Установка расширений из списка
+EXTENSIONS=$(curl -s "$EXTENSIONS_URL")
+for ext in ${EXTENSIONS}; do
+  code --install-extension "$ext"
+done
 
 # Готово!
 echo "Все настройки и сниппеты установлены!"
