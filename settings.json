@@ -37,8 +37,7 @@
   "workbench.activityBar.location": "top", //Активити бар сверху
   "workbench.editor.showTabs": "single", // Одновременное использование только одной вкладки (без множества вкладок)
   "workbench.editor.showIcons": false, // Скрыть иконки на вкладках файлов
-  "workbench.editor.labelFormat": "short", // Панель инструментов расположена сверху
-  "workbench.colorTheme": "Owlet (Slate)",
+  "workbench.editor.labelFormat": "short",
   "security.workspace.trust.enabled": false, // Отключить функцию доверия рабочей области
   "security.workspace.trust.untrustedFiles": "open", // Отключить запрос о доверии к рабочему пространству при запуске
   "terminal.integrated.defaultProfile.linux": "bash", //Оболочка терминала по умолчанию
@@ -48,16 +47,23 @@
   "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "git.autofetch": true, // Автозагрузка свежих коммитов из реп
   "npm.packageManager": "npm", // Пакетник для js
+  "javascript.updateImportsOnFileMove.enabled": "always", // Обновляет импортированные пути при перемещении файлов
+  "typescript.updateImportsOnFileMove.enabled": "always", // Обновляет импортированные пути при перемещении файлов
+  "extensions.autoCheckUpdates": false, // Автопроверка обновления расширений
+  "extensions.autoUpdate": false, // Автообновление расширений
+  "update.mode": "none", // Отключение обновлений
+  "telemetry.telemetryLevel": "off", // Отключение телеметрии
+  "workbench.colorTheme": "Owlet (Slate)", // Оформление
   "explorer.confirmDelete": false, // Не требовать подтверждения при удалении файлов
   "editor.quickSuggestionsDelay": 200, // Время появления подсказок при наборе в мс
   "editor.hover.delay": 200, // Время появления подсказок при наведении в мс
   "editor.smoothScrolling": true, // Плавная прокрутка в редакторе
   "editor.cursorSmoothCaretAnimation": "on", // Включить плавную анимацию курсора
   "ruff.enable": true, // Включаем Ruff (через официальное расширение)
-  "python.linting.enabled": true, // Включаем общий линтинг Python
   "ruff.lineLength": 88, // Максимальная длина строки
   "ruff.lint.select": ["E", "F", "W", "I", "D"], // Включённые категории проверок
   "python.linting.pylintEnabled": false, // Отключаем другие линтеры, чтобы не мешали (по желанию)
+  "python.linting.enabled": true, // Включаем общий линтинг Python
   "python.linting.flake8Enabled": false,
   "[python]": {
     "editor.formatOnSave": true,
@@ -82,6 +88,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always", // Обновляет импортированные пути при перемещении файлов
-  "sync.gist": "97fc7d05ceae8261c734efb500452ccb",
+  "sync.gist": "97fc7d05ceae8261c734efb500452ccb"
 }
