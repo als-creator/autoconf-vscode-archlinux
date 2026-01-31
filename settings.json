@@ -68,24 +68,23 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit", // Применяет все доступные "исправления" (fix all) при явном сохранении
-      "source.organizeImports": "explicit", // Автоматически упорядочивает импорты при явном сохранени
+      "source.organizeImports": "explicit" // Автоматически упорядочивает импорты при явном сохранени
     },
-    "editor.defaultFormatter": "charliermarsh.ruff", // Дефолтный форматтер для питона
+    "editor.defaultFormatter": "charliermarsh.ruff" // Дефолтный форматтер для питона
   },
   "files.associations": {
     "**/*.html": "html",
     "**/templates/**/*.html": "django-html",
     "**/templates/**/*": "django-txt",
-    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
   },
   "emmet.includeLanguages": { "django-html": "html" },
   "eslint.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.run": "onSave",
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  },
-  "sync.gist": "97fc7d05ceae8261c734efb500452ccb",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }
