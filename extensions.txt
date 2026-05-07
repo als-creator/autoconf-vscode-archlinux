@@ -15,7 +15,7 @@ d-biehl.robotcode
 adpyke.codesnap  
 charliermarsh.ruff  
 ms-python.vscode-python-envs  
-ms-ceintl.vscode-language-pack-ru  
+ms-ceintl.vscode-language-pack-ru
 ms-python.debugpy  
 redhat.vscode-yaml  
 cardinal90.multi-cursor-case-preserve  
