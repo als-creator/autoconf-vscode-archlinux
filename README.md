@@ -1,23 +1,23 @@
-## 🔥 AutoConf for VS Code (Arch Linux)
+## AutoConf for VS Code (Arch Linux)
 
 Этот репозиторий предоставляет автоматическую настройку среды Visual Studio Code на Arch Linux и производных дистрибутивах с возможностью автоматической установки расширений и пользовательских настроек.
 
-## 🚀 Быстрая установка
+## Быстрая установка
 
 Просто выполни одну команду, чтобы установить и настроить VS Code:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf-vscode-archlinux/main/autoconf-vscode-archlinux.sh | sh
+curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf_vscode_archlinux/main/autoconf_vscode_archlinux.sh | sh
 ```
 
-## 📂 Структура репозитория
+## Структура репозитория
 
 - **`settings.json`** — настройки редактора (цветовая схема, горячие клавиши, автозаполнение и прочее).
 - **`extensions.txt`** — список расширений для автоматической установки.
 - **`autoconf-vscode.sh`** — основной Bash-скрипт для автоматической настройки среды.
 - **`snippets`** — сниппеты для разных языков
 - **`code-profile`** — профиль с настройками и расширениями для импорта в редактор
-## 🔨 Особенности скрипта
+## Особенности скрипта
 
 - **Универсальность:** Подходит для любого пользователя и компьютера.
 - **Автоматичность:** Один клик — и все настроено.
@@ -25,12 +25,12 @@ curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf-vscode-archlin
 
 ## Можно форкать под свои настройки и расширения
 
-### 🔥 Запуск после правки файлов:
+### Запуск после правки файлов:
 
 После публикации файлов в репозитории, пользователь может запустить настройку с помощью единственной команды:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf-vscode-archlinux/main/autoconf-vscode-archlinux.sh | sh
+curl -fsSL https://raw.githubusercontent.com/als-creator/autoconf_vscode_archlinux/main/autoconf_vscode_archlinux.sh | sh
 ```
 
 Это скачает и исполнит скрипт, который произведёт полную подготовку среды Visual Studio Code, включая настройки и установку расширений.
