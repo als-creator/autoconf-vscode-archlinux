@@ -19,12 +19,11 @@
   "editor.selectionClipboard": true, //Отдельный буфер обмена linux для вставки средней кнопкой
   "editor.folding": false, // Отключить сворачивание кода
   "editor.minimap.autohide": "mouseover", // Миникарта открывается при наведении
-  "editor.lineHeight": 23, // Высота строки — 23 px
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]};',./", // Разделительные символы слов для навигации по тексту
   "editor.wordWrap": "on", // Гибкий перенос строк по ширине редактора
   "editor.renderLineHighlight": "none", // Отключить подсветку строк по умолчанию
-  "editor.fontFamily": "Noto Sans Mono", // Шрифт редактора
-  "editor.fontSize": 18, // Размер шрифта редактора
+  "editor.fontFamily": "'Droid Sans Mono', monospace", // Шрифт редактора
+  "editor.fontSize": 20, // Размер шрифта редактора
   "editor.tabSize": 2, // Размер табуляции равен двум пробелам
   "editor.insertSpaces": true, // Вставка правильного числа пробелов при табуляции
   "editor.detectIndentation": true, // Автоматически определять стиль отступов
@@ -43,16 +42,17 @@
   "terminal.integrated.defaultProfile.linux": "bash", //Оболочка терминала по умолчанию
   "terminal.integrated.cursorStyle": "line", // Стиль строки курсора терминала
   "terminal.integrated.copyOnSelection": true, // Копировать выделенный текст в терминал автоматически
-  "terminal.integrated.fontSize": 18, // Размер шрифта в терминале
-  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
+  "terminal.integrated.fontSize": 14, // Размер шрифта в терминале
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono", // Шрифт терминала
   "git.autofetch": true, // Автозагрузка свежих коммитов из реп
   "npm.packageManager": "npm", // Пакетник для js
-  "javascript.updateImportsOnFileMove.enabled": "always", // Обновляет импортированные пути при перемещении файлов
-  "typescript.updateImportsOnFileMove.enabled": "always", // Обновляет импортированные пути при перемещении файлов
+  "js/ts.updateImportsOnFileMove.enabled": "always", // Автоматическое обновление импортов при перемещении файлов
   "extensions.autoCheckUpdates": false, // Автопроверка обновления расширений
   "extensions.autoUpdate": false, // Автообновление расширений
   "update.mode": "none", // Отключение обновлений
-  "telemetry.telemetryLevel": "off", // Оформление
+  "telemetry.telemetryLevel": "off", // Телеметрия отключена
+  "telemetry.editStats.enabled": false, // Отключить сбор статистики редактирования
+  "telemetry.feedback.enabled": false, // Отключить сбор статистики обратной связи
   "explorer.confirmDelete": false, // Не требовать подтверждения при удалении файлов
   "editor.quickSuggestionsDelay": 200, // Время появления подсказок при наборе в мс
   "editor.hover.delay": 200, // Время появления подсказок при наведении в мс
@@ -61,31 +61,28 @@
   "ruff.enable": true, // Включаем Ruff (через официальное расширение)
   "ruff.lineLength": 88, // Максимальная длина строки
   "ruff.lint.select": ["E", "F", "W", "I", "D"], // Включённые категории проверок
-  "python.linting.pylintEnabled": false, // Отключаем другие линтеры, чтобы не мешали (по желанию)
-  "python.linting.enabled": true, // Включаем общий линтинг Python
-  "python.linting.flake8Enabled": false,
   "[python]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit", // Применяет все доступные "исправления" (fix all) при явном сохранении
-      "source.organizeImports": "explicit" // Автоматически упорядочивает импорты при явном сохранени
+      "source.organizeImports": "explicit", // Автоматически упорядочивает импорты при явном сохранени
     },
-    "editor.defaultFormatter": "charliermarsh.ruff" // Дефолтный форматтер для питона
+    "editor.defaultFormatter": "charliermarsh.ruff", // Дефолтный форматтер для питона
   },
   "files.associations": {
     "**/*.html": "html",
     "**/templates/**/*.html": "django-html",
     "**/templates/**/*": "django-txt",
-    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
   },
   "emmet.includeLanguages": { "django-html": "html" },
   "eslint.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
   },
   "eslint.run": "onSave",
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
-  "workbench.colorTheme": "Catppuccin Mocha"
+  "workbench.colorTheme": "Catppuccin Mocha",
 }

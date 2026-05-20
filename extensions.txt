@@ -2,16 +2,15 @@ itsjonq.owlet
 catppuccin.catppuccin-vsc
 formulahendry.code-runner
 tamasfe.even-better-toml  
-esbenp.prettier-vscode  
+esbenp.prettier-vscode
+dbaeumer.vscode-eslint
 golang.go  
 ritwickdey.liveserver  
 shd101wyy.markdown-preview-enhanced  
 mechatroner.rainbow-csv  
 rust-lang.rust-analyzer  
 ms-vscode.live-server  
-ms-python.vscode-python-envs
 ms-ceintl.vscode-language-pack-ru
-ms-python.debugpy
 ms-azuretools.vscode-docker
 ms-azuretools.vscode-containers
 ms-python.python  
@@ -25,7 +24,5 @@ saoudrizwan.claude-dev
 rooveterinaryinc.roo-cline  
 batisteo.vscode-django  
 pranaygp.vscode-css-peek  
-eamodio.gitlens  
 continue.continue  
-dbaeumer.vscode-eslint  
 codium.codium
